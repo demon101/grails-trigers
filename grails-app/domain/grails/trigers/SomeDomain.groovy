@@ -29,25 +29,25 @@ class SomeDomain {
         log.error "beforeValidate end(id=${id})"
     }
 
-    def beforeInsert () {
-        OldLink.findByOldAndTypeId(linkName, null)?.delete()
-        return true
-    }
+//    def beforeInsert () {
+//        OldLink.findByOldAndTypeId(linkName, null)?.delete()
+//        return true
+//    }
 
-    def beforeUpdate () {
-        log.error "beforeUpdate(id=${id})"
-
-        if (isDirty('linkName')){
-            def oldLink = getPersistentValue('linkName')
-            if (oldLink != linkName){
-                log.error "Create OldLink $oldLink -> $linkName"
-                def l = new OldLink(old: oldLink, current: linkName)
-                if (!l.save()) log.error l.errors
-            }
-        }
-
-        log.error "beforeUpdate end(id=${id})"
-        return true
-    }
+//    def beforeUpdate () {
+//        log.error "beforeUpdate(id=${id})"
+//
+//        if (isDirty('linkName')){
+//            def oldLink = getPersistentValue('linkName')
+//            if (oldLink != linkName){
+//                log.error "Create OldLink $oldLink -> $linkName"
+//                def l = new OldLink(old: oldLink, current: linkName)
+//                if (!l.save()) log.error l.errors
+//            }
+//        }
+//
+//        log.error "beforeUpdate end(id=${id})"
+//        return true
+//    }
 
 }
