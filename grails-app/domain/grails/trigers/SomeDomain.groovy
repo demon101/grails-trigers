@@ -34,8 +34,8 @@ class SomeDomain {
 //        return true
 //    }
 
-//    def beforeUpdate () {
-//        log.error "beforeUpdate(id=${id})"
+    def beforeUpdate () {
+        log.error "beforeUpdate(id=${id})"
 //
 //        if (isDirty('linkName')){
 //            def oldLink = getPersistentValue('linkName')
@@ -46,8 +46,8 @@ class SomeDomain {
 //            }
 //        }
 //
-//        log.error "beforeUpdate end(id=${id})"
-//        return true
-//    }
+        log.error "beforeUpdate end(id=${id})"
+        return true
+    }
 
 }
