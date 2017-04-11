@@ -13,4 +13,8 @@ class TestController {
         d.save()
         render "ok"
     }
+
+    def tags(){
+
+    }
 }
